@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Superheroic Wrapping</title>
+<link rel="stylesheet" type="text/css" href="styles/app.css" media="all">
+</head>
+<body>
+<div ng-app="app" ng-controller="AppVM as vm">
+  <div class="jumbotron">
+    <h1>Superheroic Wrapping</h1>
+    <p>an AngularJS Kata</p>
+  </div>
+  <div class="form-group">
+    <label>Width</label>
+    <input class="width form-control" type="number" ng-model="vm.width">
+  </div>
+  <div class="form-group">
+    <label>Text</label>
+    <textarea class="text form-control" rows=="30" ng-model="vm.text">0</textarea>
+  </div>
+  <div class="form-group">
+    <label for="">Wrapped Text</label>
+    <textarea class="wrap form-control" rows=="30">{{ vm.wrap(vm.text, vm.width) }}</textarea>
+  </div>
+</div>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
